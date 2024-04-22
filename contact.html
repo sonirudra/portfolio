@@ -6,7 +6,7 @@
 	<title>Rudra Soni</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
-	<meta name="keywords" content="" />
+	<meta name="keywords" content="iOS developer, React Native developer, Mobile app development, Mobile app developer, Software development, iOS app development, React Native app development, Cross-platform app development, Mobile application developer, iOS app developer, React Native development services, Mobile app design, App development portfolio, Hire mobile app developer, Custom app development, Mobile app development company, Freelance mobile app developer, Mobile app development services, Mobile app developer portfolio, App developer showcase" />
 	<meta name="author" content="" />
 
   <!-- Facebook and Twitter integration -->
@@ -20,8 +20,8 @@
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
 
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+	<!-- Place ./images/logo.png and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="./images/logo.png">
 
 	<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
@@ -122,7 +122,7 @@
 				<div class="row">
 					<div class="col-md-12 col-md-offset-0">
 						<div class="row">
-							<div class="col-md-4 animate-box">
+							<div class="col-md-12 animate-box">
 								<h3>My Address</h3>
 								<ul class="contact-info">
 									<li><span><i class="icon-map5"></i></span>Surat Gujarat, India.</li>
@@ -131,30 +131,33 @@
 									<li><span><i class="icon-globe3"></i></span><a href="https://www.linkedin.com/in/rudra-soni-200210224/">LinkedIn</a></li>
 								</ul>
 							</div>
-							<div class="col-md-7 col-md-push-1 animate-box">
+							<!-- <div class="col-md-7 col-md-push-1 animate-box">
 								<div class="row">
-									<div class="col-md-12">
-										<div class="form-group">
-											<textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Message"></textarea>
+									<form id="contact-form" method="post">
+										<div class="col-md-12">
+											<div class="form-group">
+												<textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message"></textarea>
+											</div>
 										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Name">
+										<div class="col-md-6">
+											<div class="form-group">
+												<input type="text" name="name" class="form-control" placeholder="Name">
+											</div>
 										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Email">
+										<div class="col-md-6">
+											<div class="form-group">
+												<input type="text" name="email" class="form-control" placeholder="Email">
+											</div>
 										</div>
-									</div>
-									<div class="col-md-12">
-										<div class="form-group">
-											<input type="submit" value="Send Message" class="btn btn-primary">
+										<div class="col-md-12">
+											<div class="form-group">
+												<input type="submit" value="Send Message" class="btn btn-primary">
+											</div>
 										</div>
-									</div>
+									</form>
 								</div>
-							</div>
+							</div> -->
+							
 						</div>
 					</div>
 				</div>
@@ -200,6 +203,27 @@
 
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
+
+	<!-- <script>
+        $(document).ready(function() {
+            $('#contact-form').submit(function(e) {
+                e.preventDefault();
+                $.ajax({
+                    type: 'POST',
+                    url: '/submit-form',
+                    data: $(this).serialize(),
+                    success: function(response) {
+						alert(response);
+						$('#contact-form')[0].reset();
+                    },
+                    error: function(xhr, status, error) {
+                        alert('Error: ' + error);
+						$('#contact-form')[0].reset();
+                    }
+                });
+            });
+        });
+    </script> -->
 
 	</body>
 </html>
